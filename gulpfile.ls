@@ -17,6 +17,7 @@ gulp.task 'clean' (cb) ->
 gulp.task 'html' ->
   gulp.src ['src/**/*.html', '!src/partials/*.html']
     .pipe gulp-html-extend!
+    .on 'error' -> throw it
     .pipe gulp.dest 'public/'
 
 gulp.task 'optimize-html' ['build'] ->
@@ -39,6 +40,7 @@ gulp.task 'css' ->
 gulp.task 'watch' ['default'] ->
   gulp.watch 'src/**/*.html', ['html']
   gulp.watch 'src/**/*.styl', ['css']
+  gulp.watch 'assets/**/*.*', ['assets']
 
 gulp.task 'assets' -> gulp.src 'assets/**/*.*' .pipe gulp.dest 'public/'
 

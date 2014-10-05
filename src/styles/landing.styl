@@ -1,0 +1,57 @@
+@import "variables"
+
+.landing
+  width 100%
+  height 100%
+  background-color darkEakPurple
+
+  .container
+    width 100%
+    height 100%
+    background-image url(/img/landing-bg.jpg)
+    background-size 450px auto
+    background-position bottom
+    background-repeat no-repeat
+
+  header
+    color white
+    font-family brandFont
+
+    h1
+      font-size 4.75em
+      line-height 1.3em
+
+    h2
+      font-size 1em
+
+  @media screen and (min-width: 450px)
+    .container
+      background-size 600px auto
+
+  @media screen and (min-width: 600px)
+    background-image url(/img/landing-bg-strip.png)
+    background-size 1px 183.2px
+    background-position bottom
+    background-repeat repeat-x
+
+    .container
+      background-image url(/img/landing-bg-large.jpg)
+      background-size 1000px auto
+
+  @media screen and (min-width: 1200px)
+    background-size 1px 219px
+
+    .container
+      background-size 1200px auto
+
+  @media screen and (min-width: 1400px)
+    background-size 1px 255px
+
+    .container
+      background-size 1400px auto
+
+    main
+      width 1200px
+      margin 0 auto
+      padding-top 100px
+
