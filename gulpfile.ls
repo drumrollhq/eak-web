@@ -23,6 +23,7 @@ gulp.task 'html' ->
 gulp.task 'optimize-html' ['build'] ->
   gulp.src 'public/**/*.html'
     .pipe gulp-usemin {
+      path: './public/'
       css: [gulp-minify-css!, 'concat', gulp-rev!]
       js: [gulp-uglify!, 'concat', gulp-rev!]
     }
