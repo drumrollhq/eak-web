@@ -1,4 +1,5 @@
 require! {
+  'glob'
   'gulp'
   'gulp-html-extend'
   'gulp-minify-css'
@@ -6,9 +7,11 @@ require! {
   'gulp-rev'
   'gulp-stylus'
   'gulp-uglify'
+  'gulp-uncss'
   'gulp-usemin'
   'nib'
   'rimraf'
+  'run-sequence'
 }
 
 gulp.task 'clean' (cb) ->
@@ -30,6 +33,12 @@ gulp.task 'optimize-html' ['build'] ->
     .pipe gulp-minify-html!
     .pipe gulp.dest 'public/'
 
+gulp.task 'optimize-css-landing' ->
+  gulp.src 'public/landing/*.css'
+    .pipe gulp-uncss html: glob.sync 'public/landing/*.html'
+    .pipe gulp-minify-css!
+    .pipe gulp.dest 'public/landing/'
+
 gulp.task 'css' ->
   gulp.src 'src/**/*.styl'
     .pipe gulp-stylus {
@@ -45,6 +54,6 @@ gulp.task 'watch' ['default'] ->
 
 gulp.task 'assets' -> gulp.src 'assets/**/*.*' .pipe gulp.dest 'public/'
 
-gulp.task 'build' <[html css assets]>
-gulp.task 'optimize' ['clean'] -> gulp.run 'optimize-html'
-gulp.task 'default' ['clean'] -> gulp.run 'build'
+gulp.task 'build' (cb) -> run-sequence 'html', 'css', 'assets', cb
+gulp.task 'optimize' (cb) -> run-sequence 'clean', 'optimize-html', 'optimize-css-landing', cb
+gulp.task 'default' (cb) -> run-sequence 'clean', 'build', cb
