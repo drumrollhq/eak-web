@@ -2,6 +2,7 @@ require! {
   'glob'
   'gulp'
   'gulp-html-extend'
+  'gulp-livescript'
   'gulp-minify-css'
   'gulp-minify-html'
   'gulp-rev-all'
@@ -62,13 +63,19 @@ gulp.task 'rev' ->
     }
     .pipe gulp.dest 'public/'
 
+gulp.task 'livescript' ->
+  gulp.src 'src/**/*.ls'
+    .pipe gulp-livescript!
+    .pipe gulp.dest 'public/'
+
 gulp.task 'watch' ['default'] ->
   gulp.watch 'src/**/*.html', ['html']
   gulp.watch 'src/**/*.styl', ['css']
+  gulp.watch 'src/**/*.ls', ['livescript']
   gulp.watch 'assets/**/*.*', ['assets']
 
 gulp.task 'assets' -> gulp.src 'assets/**/*.*' .pipe gulp.dest 'public/'
 
-gulp.task 'build' (cb) -> run-sequence 'html', 'css', 'assets', cb
+gulp.task 'build' (cb) -> run-sequence 'html', 'css', 'livescript', 'assets', cb
 gulp.task 'optimize' (cb) -> run-sequence 'clean', 'usemin', 'optimize-css-landing', 'rev', 'minify-html', 'rev', cb
 gulp.task 'default' (cb) -> run-sequence 'clean', 'build', cb
