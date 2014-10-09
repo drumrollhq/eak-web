@@ -4,12 +4,13 @@ require! {
   'gulp-html-extend'
   'gulp-minify-css'
   'gulp-minify-html'
-  'gulp-rev'
+  'gulp-rev-all'
   'gulp-stylus'
   'gulp-uglify'
   'gulp-uncss'
   'gulp-usemin'
   'nib'
+  'path'
   'rimraf'
   'run-sequence'
 }
@@ -23,13 +24,17 @@ gulp.task 'html' ->
     .on 'error' -> throw it
     .pipe gulp.dest 'public/'
 
-gulp.task 'optimize-html' ['build'] ->
+gulp.task 'usemin' ['build'] ->
   gulp.src 'public/**/*.html'
     .pipe gulp-usemin {
       path: './public/'
-      css: [gulp-minify-css!, 'concat', gulp-rev!]
-      js: [gulp-uglify!, 'concat', gulp-rev!]
+      css: [gulp-minify-css!, 'concat']
+      js: [gulp-uglify!, 'concat']
     }
+    .pipe gulp.dest 'public/'
+
+gulp.task 'minify-html' ->
+  gulp.src 'public/**/*.html'
     .pipe gulp-minify-html!
     .pipe gulp.dest 'public/'
 
@@ -47,6 +52,16 @@ gulp.task 'css' ->
     }
     .pipe gulp.dest 'public/'
 
+gulp.task 'rev' ->
+  gulp.src ['public/**', '!public/**/*.static.*']
+    .pipe gulp-rev-all {
+      ignore: [/.html$/]
+      transform-filename: (file, hash) ->
+        ext = path.extname file.path
+        return "#{path.basename file.path, ext}.#{hash.substr 0, 8}.static#{ext}"
+    }
+    .pipe gulp.dest 'public/'
+
 gulp.task 'watch' ['default'] ->
   gulp.watch 'src/**/*.html', ['html']
   gulp.watch 'src/**/*.styl', ['css']
@@ -55,5 +70,5 @@ gulp.task 'watch' ['default'] ->
 gulp.task 'assets' -> gulp.src 'assets/**/*.*' .pipe gulp.dest 'public/'
 
 gulp.task 'build' (cb) -> run-sequence 'html', 'css', 'assets', cb
-gulp.task 'optimize' (cb) -> run-sequence 'clean', 'optimize-html', 'optimize-css-landing', cb
+gulp.task 'optimize' (cb) -> run-sequence 'clean', 'usemin', 'optimize-css-landing', 'rev', 'minify-html', 'rev', cb
 gulp.task 'default' (cb) -> run-sequence 'clean', 'build', cb
