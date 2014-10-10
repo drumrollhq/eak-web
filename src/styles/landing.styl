@@ -65,7 +65,7 @@
     form
         padding-top 20px
 
-    button, input, label
+    button, input, label, .button
       display block
       height 40px
       padding 0 10px
@@ -77,7 +77,7 @@
       border none
       color white
 
-    button, input
+    button, input, .button
       background rgba(lightEakPurple, 0.3)
       border 2px solid rgba(lightEakPurple, 0.4)
       border-radius 5px
@@ -87,7 +87,7 @@
         background rgba(lighten(lightEakPurple, 20%), 0.5)
 
     radius = 5px
-    button
+    button, .button
       margin auto
       margin-top 15px
       font-size 0.7em
@@ -101,6 +101,15 @@
       margin 0
       padding 0
       font-size 0.8em
+
+    #signed-up-go
+      display inline-block
+      text-decoration none
+      float none
+      margin-left auto
+      border-radius 5px
+      margin-top 15px
+      font-size 16px
 
   .kitten-count
     z-index 3
