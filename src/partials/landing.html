@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="/styles/grid.css">
       <link rel="stylesheet" href="/styles/kitten-count.css">
       <link rel="stylesheet" href="/styles/button.css">
+      <link rel="stylesheet" href="/styles/cover.css">
       <link rel="stylesheet" href="/styles/landing.css">
     <!-- endbuild -->
   </head>
@@ -26,7 +27,7 @@
           </h3>
         </header>
 
-        <section id="signup" class="row">
+        <section class="cont row">
           <div class="summary col-md-6">
             <!-- @@placeholder = summary -->
           </div>
@@ -36,9 +37,9 @@
         </section>
 
         <div class="cta-cont">
-          <button class="btn cta">
+          <a href="#signup" class="btn cta">
             <!-- @@placeholder = signup -->
-          </button>
+          </a>
         </div>
       </main>
       <div class="kitten-count"></div>
@@ -48,9 +49,28 @@
         <!-- @@placeholder = footer -->
       </div>
     </footer>
+    <div class="cover"></div>
+    <div id="signup">
+      <div class="signup-container">
+        <h4>Sign up to play</h4>
+        <form method="POST" action="http://eraseallkittens.us7.list-manage2.com/subscribe/post?u=41bfffb3f1074558ba7a56fe5&amp;id=5891a36a1a">
+          <div class="form-group">
+            <div class="input">
+              <input id="email" type="email" value="" name="EMAIL" placeholder="tarquin@glitterquiff.org">
+            </div>
+            <div class="addon">
+              <button type="submit">Play &rarr;</button>
+            </div>
+          </div>
+        </form>
+        <p class="disclaimer">
+          We won't send you spam, or share your email with anyone else.
+        </p>
+      </div>
+    </div>
 
-    <!-- build:js /kitten-count.js -->
-      <script src="/scripts/kitten-count.js"></script>
+    <!-- build:js /landing.js -->
+      <script src="/scripts/landing.js"></script>
     <!-- endbuild -->
 
     <!-- @@include = ga.html -->

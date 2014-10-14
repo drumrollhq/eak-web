@@ -15,6 +15,63 @@ ul
   list-style disc
   padding-left 1.5em
 
+#signup
+  display none
+  position absolute
+  top 0
+  left 0
+  width 100%
+  z-index 10
+  color white
+
+  &.active
+    display block
+    animation show-signup 0.3s ease-out
+
+  .signup-container
+    margin auto
+    max-width 450px
+
+  button
+    box-shadow none
+
+  .form-group
+    width 100%
+    display table
+
+    *
+      display table-cell
+      white-space nowrap
+
+    .addon
+      width 1%
+
+  .input
+    width auto
+
+  input
+    width 100%
+
+  h4
+    text-align center
+    margin-top 50px
+    font-family brandFont
+
+  .disclaimer
+    width 80%
+    margin 20px auto
+    text-align center
+    opacity 0.8
+
+@keyframes show-signup
+  from
+    opacity 0
+    transform translateY(-50px)
+
+  to
+    opacity 1
+    transform translateY(0)
+
 .landing
   background-color #EBDF7B
   margin-bottom 50px
@@ -47,7 +104,7 @@ ul
     font-family brandFont
 
     h1
-      font-size 4.9em
+      font-size 3.5em
       line-height 1.3em
 
     h2
@@ -63,74 +120,79 @@ ul
     z-index 2
     color white
 
-  #signup
+  .cont
+    font-size 0.9em
     clear both
+    margin-top 60px
 
-    a
-      color lighten(blue, 70%)
+  .cta
+    margin-top 60px
 
-    h3
-      margin-top 30px
-      font-size 24px
-      text-align center
+  a
+    color lighten(blue, 70%)
 
-    h4
-      font-size 20px
+  h3
+    margin-top 30px
+    font-size 24px
+    text-align center
 
-    p
-      margin-top 20px
-      font-size 16px
-      font-weight 300
-      opacity 0.8
+  h4
+    font-size 20px
 
-    form
-        padding-top 20px
+  p
+    margin-top 20px
+    font-size 16px
+    font-weight 300
+    opacity 0.8
 
-    button, input, label, .button
-      display block
-      height 40px
-      padding 0 10px
-      margin 0
-      line-height 40px
-      font-family inherit
-      font-size inherit
-      background none
-      border none
-      color white
+  form
+      padding-top 20px
 
-    button, input, .button
-      background rgba(lightEakPurple, 0.3)
-      border 2px solid rgba(lightEakPurple, 0.4)
-      border-radius 5px
-      transition all 0.3s ease
+  button, input, label, .button
+    display block
+    height 40px
+    padding 0 10px
+    margin 0
+    line-height 40px
+    font-family inherit
+    font-size inherit
+    background none
+    border none
+    color white
 
-      &:hover, &:focus
-        background rgba(lighten(lightEakPurple, 20%), 0.5)
+  button, input, .button
+    background rgba(lightEakPurple, 0.3)
+    border 2px solid rgba(lightEakPurple, 0.4)
+    border-radius 5px
+    transition all 0.3s ease
 
-    radius = 5px
-    button, .button
-      margin auto
-      margin-top 15px
-      font-size 0.7em
-      font-family brandFont
-      cursor pointer
+    &:hover, &:focus
+      background rgba(lighten(lightEakPurple, 20%), 0.5)
 
-    input
-      width 100%
+  radius = 5px
+  button, .button
+    margin auto
+    margin-top 15px
+    font-size 0.7em
+    font-family brandFont
+    cursor pointer
 
-    label
-      margin 0
-      padding 0
-      font-size 0.8em
+  input
+    width 100%
 
-    #signed-up-go
-      display inline-block
-      text-decoration none
-      float none
-      margin-left auto
-      border-radius 5px
-      margin-top 15px
-      font-size 16px
+  label
+    margin 0
+    padding 0
+    font-size 0.8em
+
+  #signed-up-go
+    display inline-block
+    text-decoration none
+    float none
+    margin-left auto
+    border-radius 5px
+    margin-top 15px
+    font-size 16px
 
   .kitten-count
     z-index 3
@@ -196,46 +258,40 @@ ul
         text-align left
 
       h3
-        margin 0 7em
+        margin 0 5em
         margin-top -1.35em
-        font-size 5.5em
+        font-size 4.5em
         line-height 1.5em
 
-    #signup
-      margin-top 30px
+    h3
+      margin 0
 
-      h3
-        margin 0
+    h3, p
+      text-align inherit
 
-      h3, p
-        text-align inherit
+    button, input, label
+      float left
 
-      form
-        float right
+    button
+      margin 0
+      border-top-left-radius 0
+      border-bottom-left-radius 0
 
-      button, input, label
-        float left
+    input
+      width 300px
+      border-right none
+      border-top-right-radius 0
+      border-bottom-right-radius 0
 
-      button
-        margin 0
-        border-top-left-radius 0
-        border-bottom-left-radius 0
+    label
+      padding 0 10px
 
-      input
-        width 300px
-        border-right none
-        border-top-right-radius 0
-        border-bottom-right-radius 0
+    .summary
+      padding-right 2em
+      text-align justify
 
-      label
-        padding 0 10px
-
-      .summary
-        padding-right 2em
-        text-align justify
-
-      .list
-        padding-left 2em
+    .list
+      padding-left 2em
 
   @media screen and (min-width: 1200px)
     .container
@@ -250,11 +306,11 @@ ul
     header
       font-size 0.4em
 
-    #signup
+    .cont
       padding-top 5px
 
-      h3
-        font-size 29px
+    h3
+      font-size 29px
 
     .kitten-count
       bottom 137px

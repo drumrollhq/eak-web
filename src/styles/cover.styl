@@ -1,0 +1,21 @@
+.cover
+  display none
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  z-index 10
+  background rgba(48, 40, 91, 0.95)
+
+  &.active
+    display block
+    animation cover-in 0.5s ease
+
+@keyframes cover-in
+  from
+    opacity 0
+
+  to
+    opacity 1
+
