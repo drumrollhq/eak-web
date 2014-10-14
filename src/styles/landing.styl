@@ -98,7 +98,8 @@ ul
 
   header
     margin auto
-    margin-top 20px
+    margin-top 0px
+    padding-top 20px
     font-size 0.7em
     text-align center
     font-family brandFont
@@ -215,7 +216,7 @@ ul
       padding-bottom 175px
 
     header
-      margin-top 40px
+      padding-top 40px
       font-size 0.9em
 
     .kitten-count
@@ -248,11 +249,11 @@ ul
 
     main
       padding-top 50px
-      padding-bottom 500px
+      padding-bottom 220px
 
     header
       margin 0
-      font-size 0.75em
+      font-size 0.35em
 
       h1
         text-align left
@@ -293,9 +294,17 @@ ul
     .list
       padding-left 2em
 
+  @media screen and (max-width: 992px)
+    .list, .summary
+      padding 0 15px
+
+    .list
+      margin-top 40px
+
   @media screen and (min-width: 1200px)
     .container
-      background-size 1px 219px
+      &:before
+        background-size 1px 219px
 
       &:after
         background-size 1200px auto
@@ -337,7 +346,7 @@ ul
   .container
     background eakSkyBlue
 
-    :after
+    &:after
       background-image url(/img/landing-bg-light.jpg)
 
   main
