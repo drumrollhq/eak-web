@@ -1,0 +1,43 @@
+@import "variables"
+
+space=30px
+depress=3px
+h=6px
+
+button, .button
+  padding 10px
+  background eakPurple
+  border none
+  border-radius 5px
+  color white !important
+  font-family 'KG Next To Me', 'Open Sans', sans-serif
+  text-align center
+  line-height 1.5em
+  box-shadow 0 (h/2) 0 lighten(eakPurple, 30%)
+  transition all 0.3s ease
+
+  &:hover
+    background lighten(eakPurple, 20%)
+
+.cta-cont
+  clear both
+  text-align center
+  min-height 135px
+
+.cta
+  @extend .button
+  display inline-block
+  padding 10px 20px
+  margin space auto
+  font-size 0.9em
+  text-decoration none
+  box-shadow 0 h 0 lighten(eakPurple, 30%)
+
+  &:hover
+    background lighten(eakPurple, 10%)
+    margin-top space + depress
+    margin-bottom space - depress
+    box-shadow 0 (h - depress) 0 lighten(eakPurple, 30%)
+
+  &:active
+    background lighten(eakPurple, 30%)

@@ -1,28 +1,45 @@
 @import "variables"
 
+.testimonial
+  font-style italic
+  font-size 0.8em
+
+  cite
+    display block
+    font-size 1.1em
+    text-align right
+    font-weight 300
+    font-style normal
+
+ul
+  list-style disc
+  padding-left 1.5em
+
 .landing
-  background-color darkEakPurple
+  background-color #EBDF7B
+  margin-bottom 50px
 
   .container
+    background-color darkEakPurple
     position relative
     width 100%
-    min-height 100%
 
-    &:after
+    &:after, &:before
       content " "
       position absolute
       z-index 1
-      bottom 0
+      top 0
       display block
       width 100%
       height 100%
+      background-position bottom
+
+    &:after
       background-image url(/img/landing-bg.jpg)
       background-size 450px auto
-      background-position bottom
       background-repeat no-repeat
 
   header
-    width 19em
     margin auto
     margin-top 20px
     font-size 0.7em
@@ -36,15 +53,19 @@
     h2
       font-size 1em
 
-  main
-    position relative
+  main, .footer-cont
     width 90%
     margin 0 auto
+
+  main
+    position relative
     padding-bottom 140px
     z-index 2
     color white
 
   #signup
+    clear both
+
     a
       color lighten(blue, 70%)
 
@@ -118,12 +139,17 @@
     font-size 15px
     width 141px
 
+  footer
+    background #EBDF7B
+
   @media screen and (min-width: 450px)
     .container:after
       background-size 600px auto
 
-    main
+    main, .footer-cont
       width 415px
+
+    main
       padding-bottom 175px
 
     header
@@ -137,10 +163,10 @@
 
   @media screen and (min-width: 600px)
     .container
-      background-image url(/img/landing-bg-strip.png)
-      background-size 1px 183.2px
-      background-position bottom
-      background-repeat repeat-x
+      &:before
+        background-image url(/img/landing-bg-strip.png)
+        background-size 1px 183.2px
+        background-repeat repeat-x
 
       &:after
         background-image url(/img/landing-bg-large.jpg)
@@ -155,21 +181,28 @@
       width 234px
 
   @media screen and (min-width: 900px)
-    main
+    main, .footer-cont
       width 800px
-      padding-top 100px
-      padding-bottom 430px
+
+    main
+      padding-top 50px
+      padding-bottom 500px
 
     header
       margin 0
-      float left
       font-size 0.75em
 
+      h1
+        text-align left
+
+      h3
+        margin 0 7em
+        margin-top -1.35em
+        font-size 5.5em
+        line-height 1.5em
+
     #signup
-      float right
-      width 510px
-      text-align right
-      padding-top 11px
+      margin-top 30px
 
       h3
         margin 0
@@ -197,6 +230,13 @@
       label
         padding 0 10px
 
+      .summary
+        padding-right 2em
+        text-align justify
+
+      .list
+        padding-left 2em
+
   @media screen and (min-width: 1200px)
     .container
       background-size 1px 219px
@@ -204,14 +244,11 @@
       &:after
         background-size 1200px auto
 
-    #signup
-      width 600px
-
-    main
+    main, .footer-cont
       width 1100px
 
     header
-      font-size 1em
+      font-size 0.4em
 
     #signup
       padding-top 5px
@@ -226,15 +263,34 @@
 
   @media screen and (min-width: 1400px)
     .container
-      background-size 1px 255px
+      &:before
+        background-size 1px 255px
 
       &:after
         background-size 1400px auto
 
     main
-      padding-bottom 550px
+      padding-bottom 250px
 
     .kitten-count
       bottom 162px
       font-size 34px
       width 329px
+
+.light.landing
+  .container
+    background eakSkyBlue
+
+    :after
+      background-image url(/img/landing-bg-light.jpg)
+
+  main
+    color #333
+
+  @media screen and (min-width: 600px)
+    .container
+      &:before
+        background-image url(/img/landing-bg-strip-light.png)
+
+      &:after
+        background-image url(/img/landing-bg-large-light.jpg)

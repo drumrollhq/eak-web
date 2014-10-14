@@ -9,7 +9,9 @@
       <link rel="stylesheet" href="/styles/reset.css">
       <link rel="stylesheet" href="/styles/fonts.css">
       <link rel="stylesheet" href="/styles/base.css">
+      <link rel="stylesheet" href="/styles/grid.css">
       <link rel="stylesheet" href="/styles/kitten-count.css">
+      <link rel="stylesheet" href="/styles/button.css">
       <link rel="stylesheet" href="/styles/landing.css">
     <!-- endbuild -->
   </head>
@@ -18,30 +20,34 @@
       <main>
         <header>
           <h1>E.A.K.</h1>
-          <h2>Save kittens. Save the world.</h2>
-        </header>
-
-        <section id="signup">
-          <h3>
+          <!-- <h2>Save kittens. Save the world.</h2> -->
+          <h3 class="headline">
             <!-- @@placeholder = tagline -->
           </h3>
-          <p>
+        </header>
+
+        <section id="signup" class="row">
+          <div class="summary col-md-6">
             <!-- @@placeholder = summary -->
-          </p>
-          <form method="POST" action="http://eraseallkittens.us7.list-manage2.com/subscribe/post?u=41bfffb3f1074558ba7a56fe5&amp;id=5891a36a1a">
-            <h4>
-            </h4>
-            <div class="form-group">
-              <label for="email">
-                <!-- @@placeholder = signup -->
-              </label>
-              <input id="email" type="email" value="" name="EMAIL" placeholder="tarquin@glitterquiff.org">
-              <button type="submit">Join &rarr;</button>
-            </div>
+          </div>
+          <div class="list col-md-6">
+            <!-- @@placeholder = list -->
+          </div>
         </section>
+
+        <div class="cta-cont">
+          <button class="btn cta">
+            <!-- @@placeholder = signup -->
+          </button>
+        </div>
       </main>
       <div class="kitten-count"></div>
     </div>
+    <footer>
+      <div class="footer-cont">
+        <!-- @@placeholder = footer -->
+      </div>
+    </footer>
 
     <!-- build:js /kitten-count.js -->
       <script src="/scripts/kitten-count.js"></script>
