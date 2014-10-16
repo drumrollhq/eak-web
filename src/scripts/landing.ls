@@ -4,6 +4,8 @@ form = document.query-selector '#signup'
 function show-form
   cover.class-list.add 'active'
   form.class-list.add 'active'
+  if ga
+    ga 'send', 'pageview', '/signup-form'
 
 function hide-form
   cover.class-list.remove 'active'

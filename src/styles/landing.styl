@@ -11,6 +11,10 @@
     font-weight 300
     font-style normal
 
+.twitter-tweet
+  margin auto !important
+  margin-bottom 30px !important
+
 ul
   list-style disc
   padding-left 1.5em
@@ -112,6 +116,9 @@ ul
     h2
       font-size 1em
 
+    h3
+      line-height 1.5em
+
   main, .footer-cont
     width 90%
     margin 0 auto
@@ -125,15 +132,33 @@ ul
   .cont
     font-size 0.9em
     clear both
-    margin-top 60px
+    margin-top 30px
+
+  .list-cont
+    max-width 300px
+    margin-left auto
+    margin-right auto
 
   .list
     padding 0
     list-style none
     text-align center
 
-  .cta
-    margin-top 60px
+    .card
+      background rgba(white, 0.3)
+      border-radius 5px
+      box-shadow 0 2px 3px rgba(grey, 0.2)
+      font-size 0.9em
+      margin 10px -5px
+      padding 5px
+      padding-bottom 20px
+
+    .img
+      padding 20px 50px
+
+    img
+      display block
+      max-width 100%
 
   a
     color lighten(blue, 70%)
@@ -209,7 +234,11 @@ ul
     width 141px
 
   footer
+    padding 50px 0
     background #EBDF7B
+
+  .cta
+    font-size 18px
 
   @media screen and (min-width: 450px)
     .container:after
@@ -220,10 +249,6 @@ ul
 
     main
       padding-bottom 175px
-
-    header
-      padding-top 40px
-      font-size 0.9em
 
     .kitten-count
       bottom 92px
@@ -241,8 +266,18 @@ ul
         background-image url(/img/landing-bg-large.jpg)
         background-size 1000px auto
 
+    main, .footer-cont
+      width 570px
+
     main
-      padding-bottom 200px
+      padding-bottom 250px
+
+    .list-cont
+      max-width 570px
+
+      li
+        width 50%
+        float left
 
     .kitten-count
       bottom 112px
@@ -254,8 +289,8 @@ ul
       width 800px
 
     main
-      padding-top 50px
-      padding-bottom 220px
+      padding-top 25px
+      padding-bottom 300px
 
     header
       margin 0
@@ -294,8 +329,13 @@ ul
       padding 0 10px
 
     .summary
-      padding-right 2em
+      margin auto
+      float none
       text-align justify
+
+  @media screen and (max-width: 900px)
+    .summary
+      width auto
 
   @media screen and (max-width: 992px)
     .list, .summary
@@ -329,6 +369,21 @@ ul
       font-size 29px
       width 282px
 
+    .list-cont
+      max-width 95%
+      width 95%
+      margin-left auto
+      margin-right auto
+
+      li
+        width 25%
+
+    .card
+      margin 0
+
+      .img
+        padding 20px 75px
+
   @media screen and (min-width: 1400px)
     .container
       &:before
@@ -338,7 +393,7 @@ ul
         background-size 1400px auto
 
     main
-      padding-bottom 250px
+      padding-bottom 350px
 
     .kitten-count
       bottom 162px
