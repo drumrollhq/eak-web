@@ -1,6 +1,7 @@
 require! {
   'glob'
   'gulp'
+  'gulp-connect'
   'gulp-html-extend'
   'gulp-livescript'
   'gulp-minify-css'
@@ -76,6 +77,12 @@ gulp.task 'watch' ['default'] ->
   gulp.watch 'src/**/*.styl', ['css']
   gulp.watch 'src/**/*.ls', ['livescript']
   gulp.watch 'assets/**/*.*', ['assets']
+
+gulp.task 'serve' ['watch'] ->
+  gulp-connect.server {
+    root: 'public'
+    port: 4010
+  }
 
 gulp.task 'assets' -> gulp.src 'assets/**/*.*' .pipe gulp.dest 'public/'
 
