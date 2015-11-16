@@ -1,5 +1,5 @@
-# const root = '//api.eraseallkittens.com/v1'
-const root = '//localhost:3000/v1'
+const root = '//api.eraseallkittens.com/v1'
+# const root = '//localhost:3000/v1'
 function load-kitten-count
   r = new XML-http-request!
   r.open \GET "#root/count/alltime?types=kitten&_v=#{Date.now!}"
