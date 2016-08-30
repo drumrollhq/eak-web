@@ -1,3 +1,5 @@
+@import "variables"
+
 .site
   body&
     background-color #DCF7F6
@@ -5,7 +7,49 @@
 
     &.no-scroll
       overflow hidden
+        
+  nav
+      width 100%
+      background-color white
+      color darkEakPurple
+      height 90px
+      font-family 'KG Next To Me', 'Open Sans', sans-serif
+      display block
+      
+      h1
+          display inline-block
+          margin 16px
+          line-height 41.5px
+      ul
+          list-style-type none
+          line-height 90px
+          margin 0 auto
+          width 690px
+      
+      li
+          display inline 
+          
+      .nav-button
+          padding 10px
+          text-decoration none
+          font-size 14px
+          
+          &:hover
+            font-size 16px
+          
+          
+      .hiring
+          font-family 'Open Sans'
+          position absolute
+          font-size 20px
+          z-index 30
+          top 30px
+          right 107px
 
+          a
+            color inherit
+            text-decoration none
+          
   header
     position relative
     margin 0
@@ -51,17 +95,7 @@
       left 10px
       opacity 0.8
       
-    .hiring
-      font-family 'Open Sans'
-      position absolute
-      font-size 20px
-      z-index 30
-      top 16px
-      right 107px
-      
-      a
-        color white
-        text-decoration none
+    
 
     @media screen and (min-width: 420px)
       height 300px
@@ -107,7 +141,7 @@
   .social-buttons
     position absolute
     right 1rem
-    top 1rem
+    top 30px
     z-index 30
 
     a
