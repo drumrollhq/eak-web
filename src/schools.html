@@ -50,26 +50,20 @@
         <div class="col-sm-12">
             <h2 class="kinda-important">What teachers and education specialists are saying about E.A.K.</h2>
             <div class="row">
-                <div class="col-sm-3">
+                <div class="speech-bubble-carousel">
                     <div class="speech-bubble">
                         <p>Lorem ipsum dolor cit amet</p>
                         <strong>Said by someone</strong>
                     </div>
-                </div>
-                <div class="col-sm-3">
                     <div class="speech-bubble">
                         <p>Lorem ipsum dolor cit ametLorem ipsum dolor cit ametLorem ipsum dolor cit ametLorem ipsum dolor cit
                             ametLorem ipsum dolor cit amet</p>
                         <strong>Said by someone</strong>
                     </div>
-                </div>
-                <div class="col-sm-3">
                     <div class="speech-bubble">
                         <p>Lorem ipsum dolor cit ametLorem ipsum dolor cit ametLorem ipsum dolor cit amet</p>
                         <strong>Said by someone</strong>
                     </div>
-                </div>
-                <div class="col-sm-3">
                     <div class="speech-bubble">
                         <p>Lorem ipsum dolor cit ametLorem ipsum dolor cit ametLorem ipsum dolor cit ametLorem ipsum dolor cit
                             ametLorem ipsum dolor cit ametLorem ipsum dolor cit ametLorem ipsum dolor cit ametLorem ipsum
@@ -82,4 +76,40 @@
         </div>
     </div>
 </div>
+<!-- @@close -->
+
+<!-- @@block = scripts -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.speech-bubble-carousel').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });
+</script>
 <!-- @@close -->
