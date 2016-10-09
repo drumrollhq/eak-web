@@ -42,10 +42,6 @@ gulp.task 'minify-html' ->
 
 gulp.task 'optimize-css-landing' ->
   gulp.src 'public/landing/*.css'
-    .pipe gulp-uncss {
-      html: glob.sync 'public/landing/*.html'
-      ignore: [/active/, /hover/]
-    }
     .pipe gulp-minify-css!
     .pipe gulp.dest 'public/landing/'
 
