@@ -79,11 +79,6 @@
     padding 0
     width 100%
 
-    @media screen and (min-width: 870px)
-      background-image url(/img/head-strip.png)
-      background-size 100% 100%
-
-
   .team-member 
     border 1px solid black
     display inline-block
@@ -94,17 +89,16 @@
       line-height 1.4em
 
   .head-inner
-    height 200px
-    max-width 1680px
+    height auto
+    width 100%
     margin auto
     color white
     text-align center
     font-family 'KG Next To Me', 'Open Sans', sans-serif
-    background-color #3D366C
-    background-image unquote('url(/img/head-small.jpg)')
     background-size auto 200px
     background-position 50% 50%
     background-repeat no-repeat
+    position relative
     // image-rendering -moz-crisp-edges
     // image-rendering -o-crisp-edges
     // image-rendering -webkit-optimize-contrast
@@ -112,11 +106,34 @@
     // image-rendering crisp-edges
     // -ms-interpolation-mode: nearest-neighbor
 
-    h1
-      position relative
-      z-index 20
-      padding-top 1em
-      font-size 32px
+    .video-overlay
+      top 0
+      left 0
+      height 100%
+      width 100%
+      background-color rgba(10, 10, 10, 0.2)
+      position absolute
+
+      .text-block 
+        top 50px
+        left calc(50% - 383px)
+        width 765px
+        height 90px
+        background-color rgba(49,41,90,0.8)
+        position absolute
+        color #fff
+        h1
+          position relative
+          z-index 20
+          padding-top 1em
+          font-size 40px
+          line-height 55px
+          padding 20px
+
+        p
+          padding 30px
+          padding-top 0
+          text-align center
 
     .kitten-count
       top 117px
@@ -127,49 +144,6 @@
       top 10px
       left 10px
       opacity 0.8
-      
-    
-
-    @media screen and (min-width: 420px)
-      height 300px
-      background-size auto 300px
-
-      h1
-        font-size 48px
-
-      .kitten-count
-        font-size 22.5px
-        top 183px
-        width 166px
-
-    @media screen and (min-width: 650px)
-      background-image unquote('url(/img/head-large.jpg)')
-
-      h1
-        padding-top 0.7em
-
-      .kitten-count
-        font-size 30.5px
-        top 146px
-        width 225px
-
-      .idea-logo
-        width 100px
-
-    @media screen and (min-width: 870px)
-      height 400px
-      background-size auto 400px
-
-      h1
-        padding-top 1em
-
-      .kitten-count
-        font-size 40px
-        top 198px
-        width 298px
-
-      .idea-logo
-        width 120px
 
   .social-buttons
     position absolute
