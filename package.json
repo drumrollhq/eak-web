@@ -28,7 +28,12 @@
     "run-sequence": "^1.0.1"
   },
   "dependencies": {
+    "good": "^7.0.2",
+    "good-console": "^6.3.1",
+    "good-squeeze": "^5.0.0",
     "gulp-connect": "^2.2.0",
+    "hapi": "^15.2.0",
+    "inert": "^4.0.2",
     "uncss": "^0.9.0"
   }
 }
