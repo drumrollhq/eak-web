@@ -84,14 +84,16 @@
     padding 0
     width 100%
 
-  .team-member 
-    border 1px solid black
-    display inline-block
-    padding 20px
+  .team-container
+    .team-member 
+      display block
+      margin 15px 0
+      padding 0 15px
+      height 750px
 
-    p
-      text-align left
-      line-height 1.4em
+      p
+        text-align left
+        line-height 1.4em
 
   .head-inner
     height auto
@@ -207,7 +209,15 @@
   space=30px
   depress=3px
   h=6px
+  .news-item
+      display block
+      width 50%
+      margin 15px 0
+      padding 0 15px
 
+      h2
+        margin-bottom 15px
+  
   p
     margin-bottom 1em
     line-height 1.75em
@@ -243,36 +253,42 @@
     button
       display none !important
 
-    .speech-bubble
-      position relative
-      padding 10px
-      margin 10px
-      margin-bottom 20px
-      top 0
-      bottom 0
-      background-color white
-      border-radius 10px
-      font-size: 0.8em;
-      text-align center
-      color #444
+    .speech-bubble-container
 
-      p
+      .speech-bubble
+        position relative
+        padding 10px
+        margin 10px
+        margin-bottom 20px
+        top 0
+        bottom 0
+        background-color white
+        border-radius 10px
+        font-size: 0.8em;
         text-align center
+        color #444
 
-        &:first-child
-          font-weight bold
+        p
+          text-align center
 
-      &:after
-        content " "
-        position absolute
-        display block
-        width 0
-        height 0
-        bottom -40px
-        left 50%
-        margin-left -20px
-        border 20px solid transparent
-        border-top 20px solid white
+          &:first-child
+            font-weight bold
+
+        &:after
+          content " "
+          position absolute
+          display block
+          width 0
+          height 0
+          bottom -40px
+          left 50%
+          margin-left -20px
+          border 20px solid transparent
+          border-top 20px solid white
+
+      img
+        height 50px
+        margin-left calc(50% - 25px)
 
   h3
     font-size 18px
