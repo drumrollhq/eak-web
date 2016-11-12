@@ -3,3 +3,4 @@ assets/components
 public
 .idea
 .DS_Store
+npm-debug.log
