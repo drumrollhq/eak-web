@@ -1,16 +1,17 @@
 @import "variables"
 
-.homepage__item
+.parents__item
+
+    .row
+        flex-direction row-reverse
 
     img
         max-width 80%
 
     &:nth-of-type(odd)
 
-        background #fff
-
         .row
-            flex-direction row-reverse
+            flex-direction row
 
     .col-md-12
         padding-top 40px
@@ -25,16 +26,19 @@
             display: flex
             align-items center
 
-.homepage__item__image
+.parents__item__image
 
     display flex
     justify-content: center
     align-items center
 
-.homepage__item__buttons
-    display flex
-    flex-direction column
-    align-items center
+.parents__item--benefits
+    .parents__item__content
+        background #D4EFEE
+        padding 2em;
 
-@import "header-inner"
+        ul
+            //list-style-image: url('sqpurple.gif');
 
+            li
+                margin-bottom 2em
