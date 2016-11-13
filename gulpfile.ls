@@ -53,6 +53,14 @@ gulp.task 'css' ->
     }
     .pipe gulp.dest 'public/'
 
+gulp.task 'lib-js' ->
+  gulp.src 'src/**/*.js'
+    .pipe gulp.dest 'public/'
+
+gulp.task 'lib-css' ->
+  gulp.src 'src/**/*.css'
+    .pipe gulp.dest 'public/'
+
 gulp.task 'rev' ->
   gulp.src ['public/**', '!public/**/*.static.*']
     .pipe gulp-rev-all {
@@ -82,6 +90,6 @@ gulp.task 'serve' ['watch'] ->
 
 gulp.task 'assets' -> gulp.src 'assets/**/*.*' .pipe gulp.dest 'public/'
 
-gulp.task 'build' (cb) -> run-sequence 'html', 'css', 'livescript', 'assets', cb
+gulp.task 'build' (cb) -> run-sequence 'html', 'css', 'livescript', 'assets', 'lib-js', 'lib-css' cb
 gulp.task 'optimize' (cb) -> run-sequence 'clean', 'usemin', 'optimize-css-landing', 'rev', 'minify-html', 'rev', cb
 gulp.task 'default' (cb) -> run-sequence 'clean', 'build', cb

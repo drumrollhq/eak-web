@@ -1,56 +1,43 @@
 @import "variables"
 
 *
-  box-sizing border-box
-
-:before, :after
-  font-size 0.8em
-
-html, body
-  margin 0
-  padding 0
-  width 100%
-  height 100%
+    box-sizing border-box
 
 body
-  font-family font
-  font-size arem
-  line-height 1.5em
-  background-position center
-  background-size cover
+    font-family: font
+    padding-top: 50px
+    background #dcf7f6
 
-#main
-  width 100%
-  height 100%
-
-p
-  margin-top 0.5*arem
-
-h1, h2, h3
-  font-weight 300
-  display block
+img
+    max-width: 100%
 
 h1
-  font-size 1.75 * arem
-
 h2
-  font-size 1.5 * arem
-
 h3
-  font-size 1.4 * arem
+    font-family brandFont
+    margin-bottom 0.7em
+    color eakPurple
 
-kbd
-  background darken(white, 10%)
-  border 1px solid darken(white, 20%)
-  font-family codeFonts
-  border-radius 5px
-  padding 0 7px
+footer
+    padding 30px 10px
+    text-align center
+    background-color #ECE07A
 
-code
-  font-family codeFonts
+.btn-primary
 
-em
-  font-style italic
+    //background eakPurple
+    background lighten(eakPurple, 20%)
+    font-family brandFont
+    padding-top 10px
+    padding-bottom 10px
+    border darken(eakPurple, 20%)
 
-strong
-  font-weight bold
+
+    &:hover
+        background lighten(lighten(eakPurple, 20%), 20%)
+
+.heading
+
+    text-align center
+    margin-top 1em;
+    margin-bottom 1em;

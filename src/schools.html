@@ -1,0 +1,150 @@
+<!-- @@master = partials/master.html {"title": "hello!", "class": "schools"} -->
+
+<!-- @@block = main -->
+
+<div class="schools__item">
+    <div class="container">
+        <div class="col-md-12 heading">
+            <h2>Help to prepare your students for their future</h2>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 schools__item__content pull-right">
+                    <p>E.A.K. is pioneering as unlike other code education products, it teaches both computational thinking and
+                        professional coding languages, e.g. HTML syntax. The new learning tool supports students in building up
+                        their Personal Learning and Thinking Skills, which are crucial for lifelong success in learning.</p>
+
+                    <p>The game has been shown to inspire students to become researchers, teachers, problem solvers, team
+                        builders, writers and designers, as well as coders.</p>
+
+                    <p>E.A.K. also allows teachers to become facilitators of independent learning, since it encourages
+                        collaboration and is highly engaging to students aged 8-14.</p>
+                </div>
+                <div class="col-md-6 col-sm-6 schools__item__image">
+                    <img src="/img/schools/pirate-octopus.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="schools__item schools__item--benefits">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 schools__item__content">
+                    <!-- @@include = partials/benefits-students.html -->
+                </div>
+                <div class="col-md-6 col-sm-6 schools__item__content">
+                    <!-- @@include = partials/benefits-teachers.html -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="cold-md-12 heading">
+            <h3>What teachers are saying about E.A.K.</h3>
+        </div>
+
+        <div class="col-md-12">
+
+            <div class="speech-bubble-carousel">
+                <div class="speech-bubble-container">
+                    <div class="speech-bubble">
+                        <p>We have asked Drum Roll to become an Education Development Partner, as we think their attitude,
+                            and ability to listen and develop a stunning learning product is unique.</p>
+                        <p>Liz Hankin <br/> Educational Consultant, Oasis Learning Community </p>
+                    </div>
+                    <img src="/img/testimonial/3.png">
+                </div>
+                <div class="speech-bubble-container">
+                    <div class="speech-bubble">
+                        <p>90% of my Year 7s managed all the demo tasks without any support. It went down especially well
+                            with the girls!</p>
+                        <p>@GeekMoore</p>
+                    </div>
+                    <img src="/img/testimonial/5.png">
+                </div>
+                <div class="speech-bubble-container">
+                    <div class="speech-bubble">
+                        <p>Erase All Kittens demo is a brilliant way to teach kids and adults HTML coding: save a kitten,
+                            get a kitten video as a reward.</p>
+                        <p>@HelpKidsCode</p>
+                    </div>
+                    <img src="/img/testimonial/7.png">
+                </div>
+                <div class="speech-bubble-container">
+                    <div class="speech-bubble">
+                        <p>Just discovered Erase All Kittens - great way to learn HTML and CSS through cat gifs. Big hit
+                            with my Girls Who Code middle schoolers.</p>
+                        <p>@AmandaMunoz</p>
+                    </div>
+                    <img src="/img/testimonial/9.png">
+                </div>
+                <div class="speech-bubble-container">
+                    <div class="speech-bubble">
+                        <p>Introduced Erase All Kittens coding game to my Grade 7 class this week. Let’s just say they are
+                            hooked.
+                        </p>
+                        <p>@Kasslenters</p>
+                    </div>
+                    <img src="/img/testimonial/12.png">
+                </div>
+                <div class="speech-bubble-container">
+                    <div class="speech-bubble">
+                        <p>SAVE ADORABLE KITTENS (and also learn HTML and CSS!) with the video game Erase All Kittens. Cutest
+                            lesson ever.</p>
+                        <p>@RailsBridgeChi</p>
+                    </div>
+                    <img src="/img/testimonial/13.png">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- @@close -->
+
+<!-- @@block = scripts -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.speech-bubble-carousel').slick({
+            arrows: false,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>
+<!-- @@close -->

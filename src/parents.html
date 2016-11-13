@@ -1,0 +1,177 @@
+<!-- @@master = partials/master.html {"title": "hello!", "class": "parents"} -->
+
+<!-- @@block = main -->
+
+<div class="parents__item">
+    <div class="container">
+        <div class="col-md-12 heading">
+            <h2>Give your child an advantage</h2>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 parents__item__content pull-right">
+                    <p>E.A.K. provides a brand new way for kids to learn how to code. This fun, Mario-style game
+                        introduces professional coding languages, inspiring both girls and boys aged 8+ to become
+                        creators, rather than consumers of technology.</p>
+                    <p>You can even spend quality time playing and learning to code alongside your child, since E.A.K.
+                        is for beginners (and technophobes!) of any age.</p>
+                </div>
+                <div class="col-md-6 col-sm-6 parents__item__image">
+                    <img src="/img/parents/monkey-and-flowers.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parents__item parents__item--benefits">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 parents__item__content">
+                    <h2>Benefits</h2>
+                    <!-- @@include = partials/benefits-parents.html -->
+                </div>
+                <div class="col-md-6 col-sm-6 parents__item__image">
+                    <img src="/img/parents/butstacks.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+    <div class="cold-md-12 heading">
+        <h2>What parents and children are saying about E.A.K.</h2>
+    </div>
+
+    <div class="cold-md-12">
+      <div class="speech-bubble-carousel">
+        <div class="speech-bubble-container">
+          <div class="speech-bubble">
+            <p>I never did coding before and didn’t know what it was, but now I know it’s fun. I wish there were more levels.
+              I’m sure girls would like it if they knew how fun it was.</p>
+            <p>Noa <br/>CEO of Teach First’s eight year old daughter</p>
+          </div>
+          <img src="/img/testimonial/11.png">
+        </div>
+        <div class="speech-bubble-container">
+          <div class="speech-bubble">
+            <p>Found out my six year old taught her class E.A.K. - coding in HTML. Amazing influence.</p>
+            <p>Julie Smithson<br/>Partner at Shok Kreative Inc, Canada</p>
+          </div>
+          <img src="/img/testimonial/1.png">
+        </div>
+        <div class="speech-bubble-container">
+          <div class="speech-bubble">
+            <p>Finally! Someone made a learn to code game that captivates my ten year old daughter. Well done Erase All Kittens!</p>
+            <p>@MrsKarenNelson</p>
+          </div>
+          <img src="/img/testimonial/2.png">
+        </div>
+        <div class="speech-bubble-container">
+          <div class="speech-bubble">
+            <p>Played with Erase All Kittens again for the thousandth time with my kids today. WE NEED MORE LEVELS!!</p>
+            <p>@AlwaysComputing</p>
+          </div>
+          <img src="/img/testimonial/3.png">
+        </div>
+        <div class="speech-bubble-container">
+          <div class="speech-bubble">
+            <p>Just discovered Erase All Kittens - if this doesn’t make me want to code, I don’t know what will!!</p>
+            <p>@GemChance</p>
+          </div>
+          <img src="/img/testimonial/4.png">
+        </div>
+        <div class="speech-bubble-container">
+          <div class="speech-bubble">
+            <p>I am not an internet cat person, but Erase All Kittens may just be the coolest thing I have ever seen. Coding
+              for kids / all humans.</p>
+            <p>@monkchips</p>
+          </div>
+          <img src="/img/testimonial/5.png">
+        </div>
+        <div class="speech-bubble-container">
+          <div class="speech-bubble">
+            <p>My daughter and I just played Erase All Kittens and we’re hooked! Awesome game teaching us both HTML.</p>
+            <p>@TweetaCriit</p>
+          </div>
+          <img src="/img/testimonial/6.png">
+        </div>
+        <div class="speech-bubble-container">
+          <div class="speech-bubble">
+            <p>This is outstanding - I need to stop, before I spend all day on it.</p>
+            <p>@Rikkuness</p>
+          </div>
+          <img src="/img/testimonial/7.png">
+        </div>
+        <div class="speech-bubble-container">
+          <div class="speech-bubble">
+            <p>Erase All Kittens is a magical gift to the children of the internet . Go and show it to your kids (they will
+              learn about coding!)</p>
+            <p>@HelloItsNel</p>
+          </div>
+          <img src="/img/testimonial/8.png">
+        </div>
+        <div class="speech-bubble-container">
+          <div class="speech-bubble">
+            <p>Best introduction to coding for children and adults! Who knew kittens were the key to coding?!</p>
+            <p>@MagiHenderson</p>
+          </div>
+          <img src="/img/testimonial/9.png">
+        </div>
+        <div class="speech-bubble-container">
+          <div class="speech-bubble">
+            <p>Just enrolled to save kittens and save the world! I love the creative, storytelling method of teaching coding
+              to children!</p>
+            <p>@HobbleWobble</p>
+          </div>
+          <img src="/img/testimonial/10.png">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- @@close -->
+
+<!-- @@block = scripts -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.speech-bubble-carousel').slick({
+      dots: false,
+      infinite: true,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });
+</script>
+<!-- @@close -->

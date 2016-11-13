@@ -5,14 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "heroku-postbuild": "npm run build",
+    "build": "bower install; gulp build"
   },
   "author": "Joe Dytrych <joe@drumrollhq.com>",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "LiveScript": "^1.2.0",
+    "bower": "^1.7.9",
     "glob": "^4.0.6",
+    "good": "^7.0.2",
+    "good-console": "^6.3.1",
+    "good-squeeze": "^5.0.0",
     "gulp": "^3.8.8",
+    "gulp-connect": "^2.2.0",
     "gulp-html-extend": "^0.4.1",
     "gulp-imagemin": "^1.0.1",
     "gulp-livescript": "^1.1.0",
@@ -23,12 +30,11 @@
     "gulp-uglify": "^1.0.1",
     "gulp-uncss": "^0.5.0",
     "gulp-usemin": "https://github.com/zont/gulp-usemin/tarball/3d48d111c774765768ee3bc0bbbab097c8e5d3de",
+    "hapi": "^15.2.0",
+    "inert": "^4.0.2",
     "nib": "^1.0.4",
     "rimraf": "^2.2.8",
-    "run-sequence": "^1.0.1"
-  },
-  "dependencies": {
-    "gulp-connect": "^2.2.0",
+    "run-sequence": "^1.0.1",
     "uncss": "^0.9.0"
   }
 }

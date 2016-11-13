@@ -1,0 +1,67 @@
+@import "variables"
+
+.schools__item
+
+    font-size 20px
+    background #dcf7f6
+
+    .row
+        flex-direction row
+
+    img
+        max-width 80%
+
+    &:nth-of-type(odd)
+
+        background #fff
+
+        .row
+            flex-direction row-reverse
+
+    .col-md-12
+        padding-top 40px
+        padding-bottom 40px
+
+    &:last-of-type
+        .col-md-12
+            padding-bottom 80px
+
+    @media screen and (min-width: screen-sm-min)
+        .row
+            display: flex
+            align-items center
+
+.schools__item__image
+
+    display flex
+    justify-content: center
+    align-items center
+
+.schools__item--benefits
+
+    .schools__item__content
+
+        background rgba(#fff, 0.5)
+        padding 2em;
+        margin-bottom 1em;
+
+        h2
+
+            margin-bottom 2em
+
+        ul
+            //list-style-image: url('sqpurple.gif');
+
+            li
+                margin-bottom 2em
+
+        @media screen and (min-width: screen-sm-min)
+
+            height 855px
+
+            &:first-of-type {
+                border-right 20px solid #dcf7f6
+            }
+
+        @media screen and (min-width: screen-md-min)
+            height 630px

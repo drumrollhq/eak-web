@@ -1,0 +1,56 @@
+shelbySize = 212px
+
+footer
+    position relative
+    padding 30px 10px
+    text-align center
+    background-color #ECE07A
+
+    .shelby
+        display none
+        position absolute
+
+        img
+            width 100%
+            height auto
+    @media screen and (min-width: 650px)
+        padding-top 60px
+        margin-top 50px
+
+        .shelby
+            top -40px
+            display block
+            left 50%
+            margin-left 130px
+            width (shelbySize * 0.75)
+
+    @media screen and (min-width: 870px)
+        .shelby
+            left auto
+            right 30px
+            margin 0
+
+    @media screen and (min-width: 960px)
+        padding-top 30px
+        margin-top 0
+
+        .shelby:before
+            content attr(data-dialog)
+            display block
+            position absolute
+            top -25px
+            left -115px
+            width 120px
+            padding-right 20px
+            color black
+            opacity 0
+            background-image url(/img/line.png)
+            background-size 30px auto
+            background-position bottom right
+            background-repeat no-repeat
+            transform translate(10px, 10px)
+            transition all 0.3s ease
+
+        .shelby:hover:before
+            transform translate(0, 0)
+            opacity 1

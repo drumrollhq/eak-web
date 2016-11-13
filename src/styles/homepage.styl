@@ -1,0 +1,42 @@
+@import "variables"
+
+.homepage__item
+
+    font-size 20px
+
+    img
+        max-width 80%
+
+    &:nth-of-type(odd)
+
+        background #fff
+
+        .row
+            flex-direction row-reverse
+
+    .col-md-12
+        padding-top 40px
+        padding-bottom 40px
+
+    &:last-of-type
+        .col-md-12
+            padding-bottom 80px
+
+    @media screen and (min-width: screen-sm-min)
+        .row
+            display: flex
+            align-items center
+
+.homepage__item__image
+
+    display flex
+    justify-content: center
+    align-items center
+
+.homepage__item__buttons
+    display flex
+    flex-direction column
+    align-items center
+
+@import "header-inner"
+
