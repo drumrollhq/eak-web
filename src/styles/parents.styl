@@ -2,16 +2,21 @@
 
 .parents__item
 
+    font-size 20px
+    background #dcf7f6
+
     .row
-        flex-direction row-reverse
+        flex-direction row
 
     img
         max-width 80%
 
     &:nth-of-type(odd)
 
+        background #fff
+
         .row
-            flex-direction row
+            flex-direction row-reverse
 
     .col-md-12
         padding-top 40px
@@ -33,9 +38,15 @@
     align-items center
 
 .parents__item--benefits
+
     .parents__item__content
-        background #D4EFEE
+
+        background rgba(#fff, 0.5)
         padding 2em;
+
+        h2
+
+            margin-bottom 2em
 
         ul
             //list-style-image: url('sqpurple.gif');
