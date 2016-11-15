@@ -1,0 +1,42 @@
+.team
+
+    .team-members
+    .advisors
+
+        .team-member
+        .advisor
+
+            background rgba(#fff, 0.5)
+            height 600px
+            overflow hidden
+            border 10px solid #dcf7f6
+            border-bottom 0
+
+
+            @media screen and (min-width: screen-sm-min)
+
+                border-left none
+
+                &:first-of-type
+
+                    padding-left: 0
+
+                &:nth-of-type(odd)
+
+                    border-right none
+
+            @media screen and (min-width: screen-md-min)
+
+                &:nth-of-type(odd)
+
+                    border-right 10px solid #dcf7f6
+
+    .advisors
+
+        .advisor
+
+            height 425px
+
+            &:last-of-type
+
+                margin-bottom 10px
