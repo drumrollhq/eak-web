@@ -1,7 +1,50 @@
 @import "variables"
 
+.news-wrapper
+    width 90%
+	max-width 1100px
+	min-width 800px
+	margin 50px auto
+
+.news-items-container
+    -webkit-column-count 3
+	-webkit-column-gap 10px
+	-webkit-column-fill auto
+	-moz-column-count 3
+	-moz-column-gap 10px
+	-moz-column-fill auto
+	column-count 3
+	column-gap 15px
+	column-fill auto
+
 .news-item
     background rgba(255,255,255,0.5)
+    opacity 1
     padding 20px
-    margin-bottom 20px
+    padding-bottom 5px
     text-align center
+    display inline-block
+	margin 0 2px 15px
+    margin-bottom 10px
+	-webkit-column-break-inside avoid
+	-moz-column-break-inside avoid
+	column-break-inside avoid
+	-webkit-transition all .2s ease
+	-moz-transition all .2s ease
+	-o-transition all .2s ease
+	transition all .2s ease
+
+@media (min-width: 960px)
+	.news-items-container
+		-webkit-column-count 4
+		-moz-column-count 4
+		column-count 4
+
+@media (min-width: 1100px)
+	.news-items-container
+		-webkit-column-count 5
+		-moz-column-count 5
+		column-count 5
+
+.news-items-container:hover .news-item:not(:hover) 
+	opacity 0.4
