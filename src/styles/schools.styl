@@ -3,20 +3,14 @@
 .schools__item
 
     font-size 20px
-    background #dcf7f6
+    background #fff
 
     .row
-        flex-direction row
+        display flex
+        flex-direction column
 
     img
         max-width 80%
-
-    &:nth-of-type(odd)
-
-        background #fff
-
-        .row
-            flex-direction row-reverse
 
     .col-md-12
         padding-top 40px
@@ -26,42 +20,82 @@
         .col-md-12
             padding-bottom 80px
 
+    .heading
+
+        padding-bottom 0
+
+        h2
+            margin-bottom 10px
+
+    .schools__item__image
+
+        display flex
+        justify-content: center
+        align-items center
+        padding-top 3em
+
     @media screen and (min-width: screen-sm-min)
+
+        .schools__item__image
+            padding-top 0
+
         .row
-            display: flex
-            align-items center
+            flex-direction row-reverse
 
-.schools__item__image
 
-    display flex
-    justify-content: center
-    align-items center
+.benefits
 
-.schools__item--benefits
+    background rgba(#fff, 0.5)
+    margin 10px;
+
+    .schools__item
+
+        background transparent
+
+    .row
+        display block
 
     .schools__item__content
 
-        background rgba(#fff, 0.5)
         padding 2em;
-        margin-bottom 1em;
+        padding-top 1em
+        padding-bottom 0
+        margin 10px;
 
         h2
 
-            margin-bottom 2em
+            margin-bottom 1.5em
+            text-align left
 
         ul
-            //list-style-image: url('sqpurple.gif');
+            padding-left 20px
 
             li
                 margin-bottom 2em
+                align-items center
+
+                img
+                    display none
 
         @media screen and (min-width: screen-sm-min)
 
-            height 855px
+            margin-left 0
+            margin-right 0
 
-            &:first-of-type {
-                border-right 20px solid #dcf7f6
-            }
+            ul
+                padding-left 20px
 
-        @media screen and (min-width: screen-md-min)
-            height 630px
+        @media screen and (min-width: screen-sm-min)
+
+            ul
+                list-style none
+
+                li
+                    margin-bottom 2em
+                    display flex
+                    align-items center
+
+                    img
+                        display block
+                        width 40px
+                        margin-right 10px
