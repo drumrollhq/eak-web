@@ -44,28 +44,61 @@
     justify-content: center
     align-items center
 
-.parents__item--benefits
+.benefits
+
+    background rgba(#fff, 0.5)
+    margin 10px;
+
+    .parents__item
+        background transparent
 
     .parents__item__content
 
-        background rgba(#fff, 0.5) url('/img/parents/butstacks.png') bottom 30px right 50px no-repeat
         padding 2em;
+        padding-top 1em
+        margin 10px;
 
         h2
 
             margin-bottom 1.5em
-            text-align center
+            text-align left
 
         ul
-            list-style none
             padding-left 20px
-            max-width 80%
 
             li
                 margin-bottom 2em
-                display flex
                 align-items center
 
                 img
-                    width 40px
-                    margin-right 10px
+                    display none
+
+        @media screen and (min-width: screen-sm-min)
+
+            margin-left 0
+            margin-right 0
+
+            ul
+                list-style none
+                padding-left 20px
+
+                li
+                    margin-bottom 2em
+                    display flex
+                    align-items center
+
+        @media screen and (min-width: screen-sm-min)
+
+            ul
+                li
+                    img
+                        display block
+                        width 40px
+                        margin-right 10px
+
+        @media screen and (min-width: screen-lg-min)
+
+            background url('/img/parents/butstacks.png') bottom 30px right 50px no-repeat
+
+            ul
+                max-width 55%
