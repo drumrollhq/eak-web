@@ -48,7 +48,7 @@ gulp.task 'optimize-css-landing' ->
 gulp.task 'css' ->
   gulp.src 'src/**/*.styl'
     .pipe gulp-stylus {
-      use: [nib()]
+      use: [nib!]
       'include css': true
     }
     .pipe gulp.dest 'public/'
