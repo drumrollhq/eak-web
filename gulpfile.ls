@@ -30,8 +30,8 @@ gulp.task 'usemin' ['build'] ->
   gulp.src 'public/**/*.html'
     .pipe gulp-usemin {
       path: './public/'
-      css: [gulp-minify-css!, 'concat']
-      js: [gulp-uglify!, 'concat']
+      css: [gulp-minify-css, 'concat']
+      js: [gulp-uglify, 'concat']
     }
     .pipe gulp.dest 'public/'
 
@@ -48,7 +48,7 @@ gulp.task 'optimize-css-landing' ->
 gulp.task 'css' ->
   gulp.src 'src/**/*.styl'
     .pipe gulp-stylus {
-      use: [nib!]
+      use: [nib()]
       'include css': true
     }
     .pipe gulp.dest 'public/'
