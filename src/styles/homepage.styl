@@ -7,12 +7,16 @@
     img
         max-width 80%
 
+    .row
+        flex-direction row-reverse
+
     &:nth-of-type(odd)
 
         background #fff
+        flex-direction row
 
         .row
-            flex-direction row-reverse
+            flex-direction row
 
     .col-md-12
         padding-top 40px
@@ -37,6 +41,17 @@
     display flex
     flex-direction column
     align-items center
+
+.featured
+
+    background rgba(#fff, 0.5)
+    padding-top 40px
+    padding-bottom 40px
+    display none
+
+    @media screen and (min-width: screen-sm-min)
+
+        display block
 
 @import "header-inner"
 
