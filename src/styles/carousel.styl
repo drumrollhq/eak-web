@@ -1,0 +1,43 @@
+.speech-bubble-carousel
+
+    margin-bottom 30px
+
+    button
+        display none !important
+
+    .speech-bubble-container
+
+        .speech-bubble
+            position relative
+            padding 10px
+            margin 10px
+            margin-bottom 25px
+            top 0
+            bottom 0
+            background-color white
+            border-radius 10px
+            font-size: 0.8em;
+            text-align center
+            color #444
+
+            p
+                text-align center
+
+                &:first-child
+                    font-weight bold
+
+            &:after
+                content " "
+                position absolute
+                display block
+                width 0
+                height 0
+                bottom -40px
+                left 50%
+                margin-left -20px
+                border 20px solid transparent
+                border-top 20px solid white
+
+        img
+            height 50px
+            margin-left calc(50% - 25px)
