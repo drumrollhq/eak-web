@@ -1,53 +1,36 @@
 @import "variables"
 
-.news-items-container
-    -webkit-column-count 1
-	-webkit-column-gap 10px
-	-webkit-column-fill auto
-	-moz-column-count 1
-	-moz-column-gap 10px
-	-moz-column-fill auto
-	column-count 1
-	column-gap 10px
-	column-fill auto
+.news-items-container	
+	width 100%
 
-.news-item
-    break-inside avoid
-    transition all .2s ease
-    display inline-block
-    background rgba(255,255,255,0.5)
-    opacity 1
-    padding 20px
-    padding-bottom 5px
-    text-align center
-    margin-bottom 10px
-    -webkit-column-break-inside avoid
-	-moz-column-break-inside avoid
-	column-break-inside avoid
-	-webkit-transition all .2s ease
-	-moz-transition all .2s ease
-	-o-transition all .2s ease
-	transition all .2s ease
-	
-    
+.news-item	
+	width 100%
+	padding 15px
+
+.categories
+	width 100%
+
+.category-button
+	padding 10px 30px
+	display block
+	margin-bottom 10px
 
 @media (min-width: 768px)
-	.news-items-container
-		-webkit-column-count 2
-		-moz-column-count 2
-		column-count 2
+	.news-item
+		width 50%
+	
+	.category-button
+		display inline-block
+		margin-bottom 0
+
+	.categories
+		width 712px
+		margin 0 auto
+		padding 0
 
 @media (min-width: 992px)
-	.news-items-container
-		-webkit-column-count 3
-		-moz-column-count 3
-		column-count 3
+	.news-item
+		width 33%
+	
 
-@media (min-width: 1100px)
-	.news-items-container
-		-webkit-column-count 3
-		-moz-column-count 3
-		column-count 3
-
-.news-items-container:hover .news-item:not(:hover) 
-	opacity 0.4
+		
