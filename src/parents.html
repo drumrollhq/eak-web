@@ -26,11 +26,14 @@
     </div>
 </div>
 
-<div class="benefits">
+<div class="benefits" id="buyNow">
     <div class="benefits__item">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-sm-12 benefits__item__content">
+                <div class="col-md-6 col-sm-6 benefits__item__content">
+                    <iframe src="http://localhost:8000"></iframe>
+                </div>
+                <div class="col-md-6 col-sm-6 benefits__item__content">
                     <h2>Benefits</h2>
                     <!-- @@include = partials/benefits-parents.html -->
                 </div>
@@ -140,6 +143,9 @@
 
 <!-- @@block = scripts -->
 <script type="text/javascript">
+
+    iFrameResize();
+
   $(document).ready(function(){
     $('.speech-bubble-carousel').slick({
       dots: false,

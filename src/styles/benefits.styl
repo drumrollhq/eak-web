@@ -2,9 +2,6 @@
 
 .benefits
 
-    background rgba(#fff, 0.5)
-    margin 10px;
-
     .benefits__item
         background transparent
 
@@ -13,6 +10,7 @@
         padding 2em;
         padding-top 1em
         margin 10px;
+        background rgba(#fff, 0.5)
 
         h2
 
@@ -33,6 +31,13 @@
 
             margin-left 0
             margin-right 0
+            border-right 10px solid #dcf7f6
+            min-height 610px;
+
+
+            &:last-of-type
+
+                border-right none
 
             ul
                 list-style none
@@ -54,7 +59,7 @@
 
         @media screen and (min-width: screen-lg-min)
 
-            background url('/img/parents/butstacks.png') bottom 30px right 50px no-repeat
+            min-height 630px;
 
             ul
                 max-width 55%
