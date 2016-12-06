@@ -2,6 +2,19 @@
 
 .benefits
 
+    @media screen and (min-width: screen-sm-min)
+
+        .row
+
+            display: table;
+            margin-bottom: 10px;
+
+            [class*="col-"]
+
+                float: none;
+                display: table-cell;
+                vertical-align: top;
+
     .benefits__item
         background transparent
 
@@ -32,7 +45,6 @@
             margin-left 0
             margin-right 0
             border-right 10px solid #dcf7f6
-            min-height 610px;
 
 
             &:last-of-type
@@ -58,8 +70,6 @@
                         margin-right 10px
 
         @media screen and (min-width: screen-lg-min)
-
-            min-height 630px;
 
             ul
                 max-width 55%
