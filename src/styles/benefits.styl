@@ -1,0 +1,82 @@
+@import "variables"
+
+.benefits
+
+    @media screen and (min-width: screen-sm-min)
+
+        .row
+
+            display: table;
+            margin-bottom: 10px;
+
+            [class*="col-"]
+
+                float: none;
+                display: table-cell;
+                vertical-align: top;
+
+    .benefits__item
+        background transparent
+
+    .benefits__item__content
+
+        padding 2em;
+        padding-top 1em
+        margin 10px;
+        background rgba(#fff, 0.5)
+
+        h2
+
+            margin-bottom 1.5em
+            text-align left
+
+        ul
+            padding-left 20px
+
+            li
+                margin-bottom 2em
+                align-items center
+
+                img
+                    display none
+
+        &.image
+
+            background rgba(#fff, 0.5) url('/img/parents/banana-bird.png') bottom 33px center no-repeat;
+            background-size 33%
+
+        .price-badge
+
+            position absolute
+            right 10px
+            top 10px
+            width 91px
+
+        @media screen and (min-width: screen-sm-min)
+
+            margin-left 0
+            margin-right 0
+            border-right 10px solid #dcf7f6
+
+
+            &:last-of-type
+
+                border-right none
+
+            ul
+                list-style none
+                padding-left 20px
+
+                li
+                    margin-bottom 2em
+                    display flex
+                    align-items center
+
+        @media screen and (min-width: screen-sm-min)
+
+            ul
+                li
+                    img
+                        display block
+                        width 40px
+                        margin-right 10px

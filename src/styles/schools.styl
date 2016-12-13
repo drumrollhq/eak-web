@@ -10,11 +10,12 @@
         flex-direction column
 
     img
-        max-width 80%
+        width 300px
+        margin-left 30px
 
     .col-md-12
-        padding-top 40px
-        padding-bottom 40px
+        padding-top 20px
+        padding-bottom 20px
 
     &:last-of-type
         .col-md-12
@@ -33,6 +34,14 @@
         justify-content: center
         align-items center
         padding-top 3em
+        position relative
+
+        .price-badge
+            position absolute
+            left 25px
+            top 0
+            width 20%
+            margin-left 0
 
     @media screen and (min-width: screen-sm-min)
 
@@ -42,60 +51,13 @@
         .row
             flex-direction row-reverse
 
+    .schools__item__cta
 
-.benefits
+        font-size: 0.9em;
+        text-align center
+        color eakPurple
+        a
+            color eakPurple
 
-    background rgba(#fff, 0.5)
-    margin 10px;
-
-    .schools__item
-
-        background transparent
-
-    .row
-        display block
-
-    .schools__item__content
-
-        padding 2em;
-        padding-top 1em
-        padding-bottom 0
-        margin 10px;
-
-        h2
-
-            margin-bottom 1.5em
-            text-align left
-
-        ul
-            padding-left 20px
-
-            li
-                margin-bottom 2em
-                align-items center
-
-                img
-                    display none
-
-        @media screen and (min-width: screen-sm-min)
-
-            margin-left 0
-            margin-right 0
-
-            ul
-                padding-left 20px
-
-        @media screen and (min-width: screen-sm-min)
-
-            ul
-                list-style none
-
-                li
-                    margin-bottom 2em
-                    display flex
-                    align-items center
-
-                    img
-                        display block
-                        width 40px
-                        margin-right 10px
+            &:hover
+                text-decoration underline
