@@ -16,7 +16,7 @@
                 <p>We'll send your parents an email which will explain more about E.A.K. and the awesome skills you could learn if you have your own account!</p>
             </div>
             <div class="col-md-6 col-sm-12">
-                <form>
+                <form action="https://formspree.io/humans@drumrollhq.com" method="post">
                     <label for="name">Name</label>
                     <input type="text" name="name" required>
                     <label for="email">Parent's email address</label>
@@ -30,6 +30,9 @@
                     <input type="number" min="0" max="100" name="age" required>
                     <label for="game">Favourite game!</label>
                     <input type="text" name="game">
+                    <input type="text" name="_gotcha" style="display:none" />
+                    <input type="text" name="_subject" style="display:none" value="Student Buy Form" />
+                    <input type="text" name="_next" style="display:none" value="/buy-student-confirm.html" />
                     <button type="submit">Next &#8594;</button>
                 </form>
             </div>
