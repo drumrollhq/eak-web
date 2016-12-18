@@ -1,0 +1,81 @@
+.game-over
+    .sea
+        height 10%
+        background-color #54BFC1
+        width 100%
+        position absolute
+        bottom 40%
+        z-index 10
+
+    .sand
+        background-color #FFCF86
+        height 40%
+        width 100%
+        position absolute
+        bottom 0
+
+    img
+        position absolute
+        z-index 11
+
+        &.floyd
+            height 20%
+            right 20%
+            bottom 25%
+
+        &.crab
+            height 6%
+            bottom 14%
+            left: 30%
+
+        &.shrubbery
+            height 6%
+            top 46%
+            left 22%
+
+        @media screen and (min-width: 460px)
+            &.floyd
+                height 25%
+
+        @media screen and (min-width: 768px)
+            &.floyd
+                height 28%
+
+            &.crab
+                height 8%
+                bottom 12%
+
+            &.shrubbery
+                height 8%
+                top 44%
+        
+        @media screen and (min-width: 900px)
+            &.floyd
+                height 35%
+
+            &.crab
+                height 10%
+                bottom 10%
+
+            &.shrubbery
+                height 10%
+                top 42%
+
+    .center-block
+        text-align center
+        padding 20px
+        font-size 11px
+        h1
+            font-size 2em
+        
+        h2
+            font-family 'Open Sans'
+            font-size 1.5em
+            font-weight bold
+        
+        p
+            line-height 1.5em
+            margin-top 40px
+
+        @media screen and (min-width: 768px)
+            font-size 17px
